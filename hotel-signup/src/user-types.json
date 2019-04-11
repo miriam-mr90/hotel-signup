@@ -1,0 +1,49 @@
+{
+  "userTypes": [
+    {
+      "name": "hotel-guest",
+      "label": "A hotel guest",
+      "page-title": "Hotel guest",
+      "form": [
+        {
+          "type": "textbox",
+          "label": "Name",
+          "placeholder": "Enter your name",
+          "required": true
+        },
+        {
+          "type": "email",
+          "label": "Email",
+          "placeholder": "Enter your email",
+          "required": true
+        }
+      ],
+      "welcome-title": "¡Welcome #user-name#!",
+      "advantages": [
+        "Enjoy a 10% discount on...",
+        "24hs/365 days phone..."
+      ]
+    },
+    {
+      "name": "travel-agency",
+      "label": "A travel agency",
+      "page-title": "Travel agency",
+      "form": [
+        {
+          "type": "textbox",
+          "label": "Agency name",
+          "placeholder": "Enter your agency name",
+          "required": true
+        },
+        {
+          "type": "textbox",
+          "label": "Agency id code",
+          "placeholder": "Enter your agency id code",
+          "required": false
+        }
+      ],
+      "welcome-title": "Thank you #agency-name#!",
+      "welcome-message": "Shortly we'll be in contact"
+    }
+  ]
+}
