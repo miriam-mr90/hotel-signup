@@ -4,7 +4,7 @@ class UserSelector extends Component {
 
   render() {
     this.props.types.map((type, i) => {
-      console.log('Name: '+ type.name + '; Label: ' + type.label)
+      //console.log('Name: '+ type.name + '; Label: ' + type.label)
       return 0
     })
 
