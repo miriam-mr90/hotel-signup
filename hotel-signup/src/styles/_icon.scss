@@ -1,0 +1,12 @@
+/**
+ * ICON
+ * - Icons styles are defined here
+ */
+
+$this: ".icon";
+
+#{$this} {
+  &--xl {
+    font-size: 42px;
+  }
+}

@@ -6,6 +6,16 @@
 $this: '.welcome';
 
 #{$this} {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
   &__advantages {
     &__title {
       @extend %font--l;
@@ -17,21 +27,30 @@ $this: '.welcome';
       @extend %font--s;
       display: flex;
       flex-direction: column;
+      max-width: 250px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &__item {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
 
       & + & {
         margin-top: 18px;
       }
 
       .icon {
+        @extend %font--l;
         margin-right: 12px;
-        color: $c-silver-light;
+        padding-top: 3px;
+        color: $c-green;
       }
     }
+  }
 
+  &__continue {
+    margin-top: auto;
+    margin-bottom: 30px;
   }
 }

@@ -19,13 +19,13 @@ class UserSelector extends Component {
     // })
 
     return (
-      <section className="user-selection">
+      <section className="user-selector">
         <h1 className="title">Signup</h1>
         <h2 className="subtitle">What kind of user are you?</h2>
-        <ul className="user-selection__list">
+        <ul className="user-selector__list">
           { this.props.types.map((type, key) => {
             return (
-              <li className="user-selection__item"
+              <li className="user-selector__item"
                 onClick={this.handleSelectType.bind(this, type.name)}
                 key={key}>
                 <button type="submit" className="btn btn--secondary btn--full" onClick={this.handleSelectType.bind(this, type.name)}>{type.label}</button>
@@ -33,7 +33,7 @@ class UserSelector extends Component {
             )
           }) }
         </ul>
-        <p className="message message--centered">Enjoy a 10% discount on your reservation just for signup</p>
+        <p className="user-selector__disclaimer message message--centered">Enjoy a 10% discount on your reservation just for signup</p>
       </section>
     )
   }

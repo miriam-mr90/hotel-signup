@@ -27,11 +27,11 @@
   font-family: $f-f-paytone;
   text-align: center;
   text-transform: uppercase;
-  padding: 12px 0;
+  padding-bottom: 20px;
 }
 
 .subtitle {
-  @extend %font--m;
+  @extend %font--s;
   font-family: $f-f-barlow;
   text-align: center;
   text-transform: uppercase;

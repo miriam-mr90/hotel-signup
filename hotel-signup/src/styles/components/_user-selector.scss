@@ -3,7 +3,7 @@
  *
  */
 
-$this: '.user-selection';
+$this: '.user-selector';
 
 #{$this} {
   display: flex;
@@ -29,7 +29,11 @@ $this: '.user-selection';
     }
   }
 
-  .message {
+  &__disclaimer {
+    display: block;
+    max-width: 230px;
     margin-top: auto;
+    margin-bottom: 30px;
+    align-self: center;
   }
 }

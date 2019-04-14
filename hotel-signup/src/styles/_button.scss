@@ -22,30 +22,36 @@ $this: ".btn";
 
   &--primary {
     @extend %font--m;
-    background: $c-shapire;
-    color: $c-white;
+    background: $c-white-o;
+    color: $c-abbey;
     font-weight: bold;
 
     &:hover {
-      background-color: tint($c-shapire, 10%);
+      background-color: $c-white;
     }
   }
 
   &--secondary {
-    color: $c-shapire;
+    color: $c-white;
     font-weight: bold;
-    border: 2px solid $c-shapire;
+    border: 2px solid $c-white-o;
 
     &:active,
     &:focus,
     &:hover {
-      background: $c-shapire;
-      color: $c-white;
+      background: $c-white-o;
+      color: $c-abbey;
     }
   }
 
   &--ghost {
-    color: $c-shapire;
+    color: $c-black;
+  }
+
+  &--primary,
+  &--secondary,
+  &--ghost {
+    text-transform: uppercase;
   }
 
   &--full {

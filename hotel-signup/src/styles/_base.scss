@@ -15,6 +15,11 @@ html {
 body {
   @extend %font--m;
   font-family: $f-f-barlow;
-  color: $c-black;
-  background: $c-white;
+  color: $c-white;
+  //background: $c-white;
+
+  background-image: url(https://bit.ly/2Z37i9U);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }

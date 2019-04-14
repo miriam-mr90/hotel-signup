@@ -10,25 +10,22 @@ $form-input-border-weight: 2px;
   position: relative;
   display: flex;
   flex-direction: column;
-  color: $c-silver-dark;
+  color: $c-white;
 
   &__group {
     @extend %font--s;
 
     & + & {
-      margin-top: 30px;
+      margin-top: 24px;
     }
 
     &:focus-within {
       label {
-        // @extend %font--xs;
         color: $c-shapire;
-        // transform: translateY(10px);
       }
     }
 
     label {
-      @extend %font--xs;
       font-weight: 600;
       display: block;
       text-align: left;
@@ -45,8 +42,8 @@ $form-input-border-weight: 2px;
       width: 100%;
       height: 36px;
       padding: 5px 0;
-      color: $c-silver-dark;
-      border-bottom: 2px solid $c-silver-light;
+      color: $c-white;
+      border-bottom: 2px solid $c-white;
       cursor: pointer;
 
       &:focus {

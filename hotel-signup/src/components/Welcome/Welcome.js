@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import CheckAnimate from '../CheckAnimate/CheckAnimate'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -25,7 +26,7 @@ class Welcome extends Component {
     return (
       <section className="welcome">
         {/* TODO: get new user name */}
-        <div>
+        {/* <div>
           {this.props.user.map((user, i) => {
 
             return (
@@ -33,8 +34,11 @@ class Welcome extends Component {
             )
           })}
         </div>
-        <h2>{this.props.type}</h2>
-        <h1 className="title">Welcome {this.props.user.name}!</h1>
+        <h2>{this.props.type}</h2> */}
+        <div className="welcome__header">
+          <h1 className="title">Welcome {this.props.user.name}!</h1>
+          <CheckAnimate className="welcome__check"/>
+        </div>
 
         {/* IF advantages */}
         <div className="welcome__advantages">
@@ -52,7 +56,7 @@ class Welcome extends Component {
         </div>
         {/* END -- IF advantages */}
 
-
+        <button type="button" className="btn btn--primary welcome__continue">Continue</button>
       </section>
     )
   }

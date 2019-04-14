@@ -9,9 +9,10 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 
 import { userTypes } from './user-types.json'
 import { users } from './users.json'
-import UserSelector from './components/UserSelector/UserSelector.js'
+import UserSelector from './components/UserSelector/UserSelector'
 import SignupForm from './components/SignupForm/SignupForm'
 import Welcome from './components/Welcome/Welcome'
+
 
 library.add(fas)
 
