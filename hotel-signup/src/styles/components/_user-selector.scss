@@ -1,3 +1,8 @@
+/**
+ * USER TYPE SELECTOR FORM COMPONENT
+ *
+ */
+
 $this: '.user-selection';
 
 #{$this} {
@@ -45,5 +50,9 @@ $this: '.user-selection';
     .icon {
       font-size: 24px;
     }
+  }
+
+  .message {
+    margin-top: 20px;
   }
 }

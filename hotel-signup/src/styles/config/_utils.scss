@@ -30,3 +30,12 @@
   color: $c-shapire;
   padding: 12px 0;
 }
+
+.message {
+  @extend %font--xs;
+  padding: 12px 0;
+
+  &--centered {
+    text-align: center
+  }
+}

@@ -14,7 +14,10 @@ $form-input-border-weight: 2px;
 
   &__group {
     @extend %font--s;
-    margin-bottom: 30px;
+
+    & + & {
+      margin-top: 30px;
+    }
 
     &:focus-within {
       label {

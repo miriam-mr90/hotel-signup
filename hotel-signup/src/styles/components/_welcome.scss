@@ -1,0 +1,37 @@
+/**
+ * SIGNUP FORM COMPONENT
+ *
+ */
+
+$this: '.welcome';
+
+#{$this} {
+  &__advantages {
+    &__title {
+      @extend %font--l;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    &__list {
+      @extend %font--s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+
+      & + & {
+        margin-top: 18px;
+      }
+
+      .icon {
+        margin-right: 12px;
+        color: $c-silver-light;
+      }
+    }
+
+  }
+}
