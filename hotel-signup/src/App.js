@@ -1,12 +1,20 @@
 import React, { Component } from 'react'
+
 import './styles/app.scss'
 import './App.scss'
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
 import { userTypes } from './user-types.json'
 import { users } from './users.json'
 import UserSelector from './components/UserSelector/UserSelector.js'
 import SignupForm from './components/SignupForm/SignupForm'
 import Welcome from './components/Welcome/Welcome'
+
+library.add(fas)
+
 
 class App extends Component {
   constructor() {
@@ -59,10 +67,10 @@ class App extends Component {
               <button
                 className="btn btn--ghost nav__btn"
                 onClick={this.goBack}>
-                <i class="icon-back icon"></i>
+                <FontAwesomeIcon icon="chevron-left" className="icon" />
               </button>
               <button className="btn btn--ghost nav__btn nav__close">
-                <i class="icon-close icon"></i>
+                <FontAwesomeIcon icon="times" className="icon" />
               </button>
             </nav>
           </div>

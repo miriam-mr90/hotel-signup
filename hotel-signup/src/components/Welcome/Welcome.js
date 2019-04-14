@@ -1,5 +1,11 @@
 import React, { Component } from 'react'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fas)
+
 class Welcome extends Component {
   constructor() {
     super()
@@ -35,11 +41,11 @@ class Welcome extends Component {
           <h2 className="welcome__advantages__title">Advantages</h2>
           <ul className="welcome__advantages__list">
             <li className="welcome__advantages__item">
-              <i class="icon-discount-fill icon"></i>
+              <FontAwesomeIcon icon="check-circle" className="icon"/>
               Enjoy a 10% discount on your reservation
             </li>
             <li className="welcome__advantages__item">
-              <i class="icon-discount-fill icon"></i>
+              <FontAwesomeIcon icon="check-circle" className="icon"/>
               24hs/365 days phone 900-000-0000
             </li>
           </ul>
