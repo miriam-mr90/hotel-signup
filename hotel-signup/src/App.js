@@ -34,20 +34,20 @@ class App extends Component {
     this.goBack = this.goBack.bind(this)
   }
 
-  goBack() {
+  goBack = () => {
     this.setState({
       currentView: 'select-type'
     })
   }
 
-  selectUserType(type) {
+  selectUserType = (type) => {
     this.setState({
       selectedUserType: [...this.state.selectedUserType, type],
       currentView: 'signup-form'
     })
   }
 
-  addUser(user) {
+  addUser = (user) => {
     console.log('addUSer function')
     // Add new user to Users -> send data
     this.setState({
@@ -57,7 +57,7 @@ class App extends Component {
     })
   }
 
-  render() {
+  render = () => {
     //const types = userTypes.map(type => [type.label, type.name])
 
     return (

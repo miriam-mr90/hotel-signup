@@ -40,7 +40,7 @@ class SignupForm extends Component {
 
         <form onSubmit={this.handleSubmit} className="form">
           <div className="form__group">
-            <label for="type">Type</label>
+            <label htmlFor="type">Type</label>
             <select name="type" onChange={this.handleInput}>
               <option value="hotel-guest">A hotel guest</option>
               <option value="travel-agency">A travel agency</option>
@@ -48,7 +48,7 @@ class SignupForm extends Component {
             </select>
           </div>
           <div className="form__group">
-            <label for="name">name</label>
+            <label htmlFor="name">name</label>
             <input
               type="text"
               name="name"
@@ -56,7 +56,7 @@ class SignupForm extends Component {
             />
           </div>
           <div className="form__group">
-            <label for="lastName">lastName</label>
+            <label htmlFor="lastName">lastName</label>
             <input
               type="text"
               name="lastName"
@@ -64,7 +64,7 @@ class SignupForm extends Component {
             />
           </div>
           <div className="form__group">
-            <label for="email">email</label>
+            <label htmlFor="email">email</label>
             <input
               type="email"
               name="email"
@@ -72,7 +72,7 @@ class SignupForm extends Component {
             />
           </div>
           <div className="form__group">
-            <label for="phone">phone</label>
+            <label htmlFor="phone">phone</label>
             <input
               type="tel"
               name="phone"
