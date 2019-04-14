@@ -1,0 +1,49 @@
+$this: '.user-selection';
+
+#{$this} {
+
+  &__list {
+    margin-top: 30px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    cursor: pointer;
+    border-bottom: 2px solid $c-silver-light;
+    transition: all 400ms linear;
+
+    &:first-child {
+      border-top: 2px solid $c-silver-light;
+    }
+
+    &:hover {
+      color: $c-shapire;
+      //border-color: $c-shapire;
+    }
+  }
+
+  &__ico {
+    display: flex;
+    width: 52px;
+    height: 52px;
+    margin-right: 12px;
+    align-items: center;
+    justify-content: center;
+    color: $c-silver-light;
+    border: 2px solid $c-silver-light;
+    border-radius: 50%;
+
+    transition: all 400ms linear;
+
+    #{$this}__item:hover & {
+      color: $c-shapire;
+      border-color: $c-shapire;
+    }
+
+    .icon {
+      font-size: 24px;
+    }
+  }
+}

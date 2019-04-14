@@ -1,0 +1,31 @@
+/**
+ * app.scss
+ * - config -> _colors + _breakpoints + _fonts + functions + animations + mixins
+ * - _reset (reset styles: a, button, ul)
+ * - _helpers (align, hidden, )
+ * - _base [body, ]
+ * - _button
+ * - _link
+ * - _form
+ * - modules -> [header, ]
+ */
+
+@import
+  'config/_colors',
+  'config/_fonts',
+  'config/_icon-font',
+  'config/_utils',
+  '_reset',
+  '_base',
+  '_button',
+  '_form',
+  '_header',
+  '_nav';
+
+/** Components
+  * Each component is represented in Sass inside the ./components folder
+*/
+@import
+  'components/_signup-form',
+  'components/_user-selector',
+  'components/_welcome';

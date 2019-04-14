@@ -1,0 +1,22 @@
+/**
+ * NAV
+ * - Navigation element styles are defined here
+ */
+
+$this: '.nav';
+
+#{$this} {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &__btn {
+    // TODO: @include mixin tamaño iconos
+    font-size: 24px;
+  }
+
+  &__close {
+    align-self: flex-start;
+  }
+}

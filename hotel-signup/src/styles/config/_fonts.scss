@@ -1,0 +1,72 @@
+/**
+ * FONTS
+ * - All relative to fonts is defined here
+ * - Fonts were downloaded from Google Fonts
+ */
+
+// Families
+$f-f-fjalla: 'Fjalla One', sans-serif;
+$f-f-acme: 'Acme', sans-serif;
+$f-f-barlow: 'Barlow Semi Condensed', sans-serif;
+
+// Sizes
+$f-s-def: 14px;
+$f-s-xs: 12px;
+$f-s-s: 14px;
+$f-s-m: 16px;
+$f-s-l: 18px;
+$f-s-xl: 21px;
+
+// Line height
+$f-lh-val: 1.5;
+$f-lh-def: 14px * $f-lh-val;
+
+// To extend font sizes
+%font {
+  &--xs {
+    font-size: $f-s-xs;
+    line-height: $f-s-xs * $f-lh-val;
+  }
+
+  &--s {
+    font-size: $f-s-s;
+    line-height: $f-s-s * $f-lh-val;
+  }
+
+  &--m {
+    font-size: $f-s-m;
+    line-height: $f-s-m * $f-lh-val;
+  }
+
+  &--l {
+    font-size: $f-s-l;
+    line-height: $f-s-l * $f-lh-val;
+  }
+}
+
+@font-face {
+  font-family: 'Fjalla One';
+  font-style: normal;
+  font-weight: 400;
+  src: font-url('/src/fonts/FjallaOne.ttf');
+  src:
+    font-url('/src/fonts/FjallaOne.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Acme';
+  font-style: normal;
+  font-weight: 400;
+  src: font-url('/src/fonts/Acme.ttf');
+  src:
+    font-url('/src/fonts/Acme.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: font-url('/src/fonts/BarlowSemiCondensed.ttf');
+  src:
+    font-url('/src/fonts/BarlowSemiCondensed.woff') format('woff');
+}

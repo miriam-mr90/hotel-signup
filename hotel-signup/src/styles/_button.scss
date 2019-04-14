@@ -1,0 +1,43 @@
+/**
+ * BUTTON
+ * - Button styles are defined here
+ */
+
+$this: ".btn";
+
+#{$this} {
+  width: max-content;
+  background: none;
+  border: none;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s, opacity 0.15s;
+  outline: none;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:not(&--ghost) {
+    padding: 10px 60px;
+    border-radius: 30px;
+  }
+
+  &--primary {
+    @extend %font--m;
+    background: $c-shapire;
+    color: $c-white;
+    font-weight: bold;
+  }
+
+  &--secondary {
+    color: $c-shapire;
+    border: 2px solid $c-shapire;
+  }
+
+  &--ghost {
+    color: $c-shapire;
+  }
+
+  &--disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
