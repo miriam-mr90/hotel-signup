@@ -23,11 +23,18 @@
 }
 
 .title {
-  @extend %font--l;
-  font-family: $f-f-acme;
+  @extend %font--xl;
+  font-family: $f-f-paytone;
   text-align: center;
   text-transform: uppercase;
-  color: $c-shapire;
+  padding: 12px 0;
+}
+
+.subtitle {
+  @extend %font--m;
+  font-family: $f-f-barlow;
+  text-align: center;
+  text-transform: uppercase;
   padding: 12px 0;
 }
 

@@ -25,15 +25,31 @@ $this: ".btn";
     background: $c-shapire;
     color: $c-white;
     font-weight: bold;
+
+    &:hover {
+      background-color: tint($c-shapire, 10%);
+    }
   }
 
   &--secondary {
     color: $c-shapire;
+    font-weight: bold;
     border: 2px solid $c-shapire;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background: $c-shapire;
+      color: $c-white;
+    }
   }
 
   &--ghost {
     color: $c-shapire;
+  }
+
+  &--full {
+    width: 100%;
   }
 
   &--disabled {

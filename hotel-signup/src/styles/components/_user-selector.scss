@@ -6,22 +6,36 @@
 $this: '.user-selection';
 
 #{$this} {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   &__list {
     margin-top: 30px;
+
+    // max-width: max-content;
+    // margin-left: auto;
+    // margin-right: auto;
+    text-align: center;
   }
 
   &__item {
     display: flex;
     align-items: center;
-    padding: 20px 10px;
+    //padding: 20px 10px;
+    // padding: 10px 0;
     cursor: pointer;
-    border-bottom: 2px solid $c-silver-light;
+    //border-bottom: 2px solid $c-silver-light;
     transition: all 400ms linear;
 
     &:first-child {
-      border-top: 2px solid $c-silver-light;
+      //border-top: 2px solid $c-silver-light;
     }
+
+    // background: $c-shapire;
+    // color: $c-white;
+    // text-align: center;
+    & + & { margin-top: 16px; }
 
     &:hover {
       color: $c-shapire;
@@ -50,9 +64,11 @@ $this: '.user-selection';
     .icon {
       font-size: 24px;
     }
+
+    display: none;
   }
 
   .message {
-    margin-top: 20px;
+    margin-top: auto;
   }
 }

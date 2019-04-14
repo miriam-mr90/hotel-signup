@@ -28,7 +28,7 @@ class Welcome extends Component {
           })}
         </div>
         <h2>{this.props.type}</h2>
-        <p>Welcome {this.props.user.name}!</p>
+        <h1 className="title">Welcome {this.props.user.name}!</h1>
 
         {/* IF advantages */}
         <div className="welcome__advantages">

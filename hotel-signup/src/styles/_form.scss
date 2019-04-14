@@ -29,14 +29,11 @@ $form-input-border-weight: 2px;
 
     label {
       @extend %font--xs;
-      font-weight: bold;
+      font-weight: 600;
       display: block;
       text-align: left;
       text-transform: capitalize;
-      z-index: -1;
-
-      // transform: translateY(32px);
-      transition: all 0.4s;
+      transition: all 0.15s;
     }
 
     input:not([type="submit"]),
@@ -50,6 +47,7 @@ $form-input-border-weight: 2px;
       padding: 5px 0;
       color: $c-silver-dark;
       border-bottom: 2px solid $c-silver-light;
+      cursor: pointer;
 
       &:focus {
         border-color: $c-shapire;
@@ -60,13 +58,10 @@ $form-input-border-weight: 2px;
 
     input:not([type="submit"]) {
       display: block;
-      z-index: 1;
     }
 
     select {
       appearance: none;
-      cursor: pointer;
-      transition: border-color 0.4s;
     }
   }
 

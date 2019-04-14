@@ -20,17 +20,15 @@ class UserSelector extends Component {
 
     return (
       <section className="user-selection">
-        <h1 className="title">What kind of user are you?</h1>
+        <h1 className="title">Signup</h1>
+        <h2 className="subtitle">What kind of user are you?</h2>
         <ul className="user-selection__list">
           { this.props.types.map((type, key) => {
             return (
               <li className="user-selection__item"
                 onClick={this.handleSelectType.bind(this, type.name)}
                 key={key}>
-                <div class="user-selection__ico">
-                  <i class="icon-discount-fill icon"></i>
-                </div>
-                {type.label}
+                <button type="submit" className="btn btn--secondary btn--full" onClick={this.handleSelectType.bind(this, type.name)}>{type.label}</button>
               </li>
             )
           }) }
