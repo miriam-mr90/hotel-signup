@@ -7,18 +7,30 @@
       "form": [
         {
           "type": "textbox",
+          "name": "name",
           "label": "Name",
-          "placeholder": "Enter your name",
+          "required": true
+        },
+        {
+          "type": "textbox",
+          "name": "lastName",
+          "label": "Last name",
           "required": true
         },
         {
           "type": "email",
+          "name": "email",
           "label": "Email",
-          "placeholder": "Enter your email",
           "required": true
+        },
+        {
+          "type": "tel",
+          "name": "phone",
+          "label": "phone",
+          "required": false
         }
       ],
-      "welcome-title": "¡Welcome #user-name#!",
+      "welcome-title": "Welcome!",
       "advantages": [
         "Enjoy a 10% discount on...",
         "24hs/365 days phone..."
@@ -31,18 +43,63 @@
       "form": [
         {
           "type": "textbox",
-          "label": "Agency name",
-          "placeholder": "Enter your agency name",
+          "name": "name",
+          "label": "Agency Name",
           "required": true
         },
         {
           "type": "textbox",
+          "name": "contactName",
+          "label": "Contact name",
+          "required": true
+        },
+        {
+          "type": "email",
+          "name": "email",
+          "label": "Contact email",
+          "required": true
+        },
+        {
+          "type": "text",
+          "name": "code",
           "label": "Agency id code",
-          "placeholder": "Enter your agency id code",
           "required": false
         }
       ],
-      "welcome-title": "Thank you #agency-name#!",
+      "welcome-title": "Thank you!",
+      "welcome-message": "Shortly we'll be in contact"
+    },
+    {
+      "name": "company",
+      "label": "A company",
+      "page-title": "Company",
+      "form": [
+        {
+          "type": "textbox",
+          "name": "name",
+          "label": "Company ame",
+          "required": true
+        },
+        {
+          "type": "email",
+          "name": "email",
+          "label": "Contact email",
+          "required": true
+        },
+        {
+          "type": "tel",
+          "name": "phone",
+          "label": "phone",
+          "required": true
+        },
+        {
+          "type": "textarea",
+          "name": "comments",
+          "label": "Comments",
+          "required": false
+        }
+      ],
+      "welcome-title": "Thank you!",
       "welcome-message": "Shortly we'll be in contact"
     }
   ]
