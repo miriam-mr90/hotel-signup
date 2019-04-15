@@ -13,7 +13,7 @@ class SignupForm extends Component {
     this.isFormValid = this.isFormValid.bind(this)
   }
 
-  handleInput(e) {
+  handleInput = (e) => {
     const { value, name } = e.target;
     this.setState({
       [name]: value
@@ -21,7 +21,7 @@ class SignupForm extends Component {
   }
 
 
-  handleSubmit(e) {
+  handleSubmit = (e) => {
     e.preventDefault()
     let form = e.target;
     let data = new FormData(e.target);
@@ -43,7 +43,7 @@ class SignupForm extends Component {
     console.log('isFormValid');
   }
 
-  render() {
+  render = () => {
     const inputs = this.props.form.form;
 
     return (

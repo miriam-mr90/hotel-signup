@@ -107,7 +107,7 @@ class App extends Component {
           }
         </main>
       </div>
-    );
+    )
   }
 }
 

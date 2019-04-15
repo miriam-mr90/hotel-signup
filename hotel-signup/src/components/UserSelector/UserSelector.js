@@ -7,11 +7,11 @@ class UserSelector extends Component {
     this.handleSelectType = this.handleSelectType.bind(this)
   }
 
-  handleSelectType(type) {
+  handleSelectType = (type) => {
     this.props.onSelectUserType(type)
   }
 
-  render() {
+  render = () => {
 
     return (
       <section className="user-selector">

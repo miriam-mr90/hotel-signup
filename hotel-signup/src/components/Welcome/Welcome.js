@@ -14,7 +14,7 @@ class Welcome extends Component {
     super()
   }
 
-  render() {
+  render = () => {
 
     return (
       <section className="welcome">
@@ -30,10 +30,10 @@ class Welcome extends Component {
             <ul className="welcome__advantages__list">
               {this.props.welcome.advantages.map((adv, key) => {
                 return (
-                <li className="welcome__advantages__item" key={key}>
-                  <FontAwesomeIcon icon="check-circle" className="icon" />
-                  {adv}
-                </li>
+                  <li className="welcome__advantages__item" key={key}>
+                    <FontAwesomeIcon icon="check-circle" className="icon" />
+                    {adv}
+                  </li>
                 )
               })}
             </ul>
