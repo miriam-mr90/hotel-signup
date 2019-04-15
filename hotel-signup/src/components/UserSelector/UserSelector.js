@@ -8,16 +8,10 @@ class UserSelector extends Component {
   }
 
   handleSelectType(type) {
-    // let type = e.target.value
-    console.log(type)
     this.props.onSelectUserType(type)
   }
 
   render() {
-    // this.props.types.map((type) => {
-    //   //console.log('Name: '+ type.name + '; Label: ' + type.label)
-    //   return 0
-    // })
 
     return (
       <section className="user-selector">
@@ -26,15 +20,20 @@ class UserSelector extends Component {
         <ul className="user-selector__list">
           { this.props.types.map((type, key) => {
             return (
-              <li className="user-selector__item"
-                onClick={this.handleSelectType.bind(this, type.name)}
-                key={key}>
-                <button type="submit" className="btn btn--secondary btn--full" onClick={this.handleSelectType.bind(this, type.name)}>{type.label}</button>
+              <li className="user-selector__item" key={key}>
+                <button
+                  type="submit"
+                  className="btn btn--secondary btn--full"
+                  onClick={this.handleSelectType.bind(this, type.key)}>
+                  {type.label}
+                </button>
               </li>
             )
           }) }
         </ul>
-        <p className="user-selector__disclaimer message message--centered">Enjoy a 10% discount on your reservation just for signup</p>
+        <p className="user-selector__disclaimer message message--centered">
+          Enjoy a 10% discount on your reservation just for signup
+        </p>
       </section>
     )
   }

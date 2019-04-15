@@ -23,10 +23,19 @@ class App extends Component {
     this.state = {
       userTypes,
       users,
-      types: userTypes.map(type => ({ label: type.label, name: type.name })),
-      newUser: [],
-      selectedUserType: '',
-      currentView: 'select-type'
+      currentView: 'select-type',
+      types: userTypes.map((type, key) => ({ key: key, label: type.label })),
+      signupForm: {
+        title: '',
+        form: []
+      },
+      welcome: {
+        name: '',
+        title: '',
+        message: '',
+        advantages: []
+      },
+      welcome: []
     }
 
     this.addUser = this.addUser.bind(this)
@@ -40,25 +49,38 @@ class App extends Component {
     })
   }
 
-  selectUserType = (type) => {
+  selectUserType = (typeKey) => {
+    const type = this.state.userTypes[typeKey]
+
     this.setState({
-      selectedUserType: [...this.state.selectedUserType, type],
+      signupForm: {
+        ...this.state.signupForm,
+        title: type.pageTitle,
+        form: type.form
+      },
+      welcome: {
+        ...this.state.welcome,
+        title: type.welcomeTitle,
+        message: type.welcomeMessage,
+        advantages: type.advantages,
+      },
       currentView: 'signup-form'
     })
   }
 
   addUser = (user) => {
-    console.log('addUSer function')
-    // Add new user to Users -> send data
     this.setState({
       users: [...this.state.users, user],
-      newUser: [...this.state.newUser, user],
+      welcome: {
+        ...this.state.welcome,
+        user: user.name
+      },
       currentView: 'welcome'
     })
+
   }
 
   render = () => {
-    //const types = userTypes.map(type => [type.label, type.name])
 
     return (
       <div className="App">
@@ -76,14 +98,15 @@ class App extends Component {
         </header>
 
         <main className="main wrapper">
+
           {
             this.state.currentView === 'select-type' && <UserSelector onSelectUserType={this.selectUserType} types={this.state.types} />
           }
           {
-            this.state.currentView === 'signup-form' && <SignupForm onAddUser={this.addUser} type={this.state.selectedUserType} typeLabel="Hotel guest" />
+            this.state.currentView === 'signup-form' && <SignupForm onAddUser={this.addUser} form={this.state.signupForm} />
           }
           {
-            this.state.currentView === 'welcome' && <Welcome user={this.state.newUser} type={this.state.selectedUserType} />
+            this.state.currentView === 'welcome' && <Welcome welcome={this.state.welcome} />
           }
         </main>
       </div>
