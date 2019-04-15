@@ -14,12 +14,7 @@ html {
 
 body {
   @extend %font--m;
+  height: 100%;
   font-family: $f-f-barlow;
   color: $c-white;
-  //background: $c-white;
-
-  background-image: url(https://bit.ly/2Z37i9U);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
 }

@@ -2,5 +2,16 @@
 $this: '.App';
 
 #{$this} {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+
+  background-image: url(https://bit.ly/2Z37i9U);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   background: #203c5d80;
+
+  .main { flex: 1; }
 }

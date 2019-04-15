@@ -3,10 +3,13 @@
  * - Basic classes considered as utils and general are defined here
  */
 
+.full-height {
+  height: 100%;
+}
+
 .wrapper {
   max-width: 90vw;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 
   // This applies from 600px onwards
   @media (min-width: 600px) {

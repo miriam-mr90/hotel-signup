@@ -10,7 +10,7 @@ $this: '.welcome';
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  padding-bottom: 30px;
 
   &__header {
     text-align: center;
@@ -51,7 +51,6 @@ $this: '.welcome';
   }
 
   &__continue {
-    margin-top: auto;
-    margin-bottom: 30px;
+    margin-top: 30px;
   }
 }

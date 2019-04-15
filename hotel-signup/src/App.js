@@ -62,8 +62,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header className="header">
-          <div className="wrapper">
+        <header className="header wrapper">
             <nav className="nav">
               <button
                 className="btn btn--ghost nav__btn"
@@ -74,7 +73,6 @@ class App extends Component {
                 <FontAwesomeIcon icon="times" className="icon" />
               </button>
             </nav>
-          </div>
         </header>
 
         <main className="main wrapper">
