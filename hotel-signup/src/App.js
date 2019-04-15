@@ -84,11 +84,14 @@ class App extends Component {
       <div className="App">
         <header className="header wrapper">
             <nav className="nav">
-              <button
-                className="btn btn--ghost nav__btn"
-                onClick={this.goBack}>
-                <FontAwesomeIcon icon="chevron-left" className="icon" />
-              </button>
+            {this.state.currentView !== 'select-type' ? (
+                <button
+                  className="btn btn--ghost nav__btn"
+                  onClick={this.goBack}>
+                  <FontAwesomeIcon icon="chevron-left" className="icon" />
+                </button>
+              ) : null}
+
               <button className="btn btn--ghost nav__btn nav__close">
                 <FontAwesomeIcon icon="times" className="icon" />
               </button>
