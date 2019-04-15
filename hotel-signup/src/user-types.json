@@ -3,7 +3,7 @@
     {
       "name": "hotel-guest",
       "label": "A hotel guest",
-      "page-title": "Hotel guest",
+      "pageTitle": "Hotel guest",
       "form": [
         {
           "type": "textbox",
@@ -30,16 +30,16 @@
           "required": false
         }
       ],
-      "welcome-title": "Welcome!",
+      "welcomeTitle": "Welcome!",
       "advantages": [
-        "Enjoy a 10% discount on...",
-        "24hs/365 days phone..."
+        "Enjoy a 10% discount on your reservation",
+        "24hs/365 days phone 900 - 000 - 0000"
       ]
     },
     {
       "name": "travel-agency",
       "label": "A travel agency",
-      "page-title": "Travel agency",
+      "pageTitle": "Travel agency",
       "form": [
         {
           "type": "textbox",
@@ -66,18 +66,18 @@
           "required": false
         }
       ],
-      "welcome-title": "Thank you!",
-      "welcome-message": "Shortly we'll be in contact"
+      "welcomeTitle": "Thank you!",
+      "welcomeMessage": "Shortly we'll be in contact"
     },
     {
       "name": "company",
       "label": "A company",
-      "page-title": "Company",
+      "pageTitle": "Company",
       "form": [
         {
           "type": "textbox",
           "name": "name",
-          "label": "Company ame",
+          "label": "Company name",
           "required": true
         },
         {
@@ -99,8 +99,8 @@
           "required": false
         }
       ],
-      "welcome-title": "Thank you!",
-      "welcome-message": "Shortly we'll be in contact"
+      "welcomeTitle": "Thank you!",
+      "welcomeMessage": "Shortly we'll be in contact"
     }
   ]
 }
