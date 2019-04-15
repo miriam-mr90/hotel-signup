@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 
 import { userTypes } from './user-types.json'
-import { users } from './users.json'
 import UserSelector from './components/UserSelector/UserSelector'
 import SignupForm from './components/SignupForm/SignupForm'
 import Welcome from './components/Welcome/Welcome'
@@ -22,7 +21,7 @@ class App extends Component {
     super()
     this.state = {
       userTypes,
-      users,
+      users: [],
       currentView: 'select-type',
       types: userTypes.map((type, key) => ({ key: key, label: type.label })),
       signupForm: {
@@ -77,7 +76,6 @@ class App extends Component {
       },
       currentView: 'welcome'
     })
-
   }
 
   render = () => {
@@ -98,7 +96,6 @@ class App extends Component {
         </header>
 
         <main className="main wrapper">
-
           {
             this.state.currentView === 'select-type' && <UserSelector onSelectUserType={this.selectUserType} types={this.state.types} />
           }
