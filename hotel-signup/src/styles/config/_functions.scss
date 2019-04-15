@@ -1,8 +1,0 @@
-/**
- * FUNCTIONS
- * - SASS functions are defined here
- */
-
-@function tint($color, $percentage) {
-  @return mix(white, $color, $percentage);
-}

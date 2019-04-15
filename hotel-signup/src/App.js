@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import './styles/app.scss'
+import './styles/styles.scss'
 import './App.scss'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
