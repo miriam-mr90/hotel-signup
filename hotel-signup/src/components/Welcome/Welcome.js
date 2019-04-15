@@ -15,11 +15,12 @@ class Welcome extends Component {
   }
 
   render = () => {
+    const welcomeMessage = this.props.welcome.title.replace(/@\w*@/g, this.props.welcome.user);
 
     return (
       <section className="welcome">
         <div className="welcome__header">
-          <h1 className="title">Welcome {this.props.welcome.user}!</h1>
+          <h1 className="title">{welcomeMessage}</h1>
           <CheckAnimate className="welcome__check"/>
         </div>
 
@@ -42,7 +43,7 @@ class Welcome extends Component {
 
         {/* Display User advantages only when exist */}
         {this.props.welcome.message ? (
-          <p class="message">{this.props.welcome.message}</p>
+          <p className="message">{this.props.welcome.message}</p>
         ) : null}
 
         <button type="button" className="btn btn--primary welcome__continue">Continue</button>

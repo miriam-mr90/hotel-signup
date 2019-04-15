@@ -30,7 +30,7 @@
           "required": false
         }
       ],
-      "welcomeTitle": "Welcome!",
+      "welcomeTitle": "Welcome @name@!",
       "advantages": [
         "Enjoy a 10% discount on your reservation",
         "24hs/365 days phone 900 - 000 - 0000"
@@ -66,7 +66,7 @@
           "required": false
         }
       ],
-      "welcomeTitle": "Thank you!",
+      "welcomeTitle": "Thank you @name@!",
       "welcomeMessage": "Shortly we'll be in contact"
     },
     {
@@ -99,7 +99,7 @@
           "required": false
         }
       ],
-      "welcomeTitle": "Thank you!",
+      "welcomeTitle": "Thank you @name@!",
       "welcomeMessage": "Shortly we'll be in contact"
     }
   ]
