@@ -6,6 +6,11 @@
 $this: ".icon";
 
 #{$this} {
+
+  &--m {
+    font-size: 21px;
+  }
+
   &--xl {
     font-size: 42px;
   }

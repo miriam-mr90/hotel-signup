@@ -31,7 +31,7 @@ class Welcome extends Component {
               {this.props.welcome.advantages.map((adv, key) => {
                 return (
                   <li className="welcome__advantages__item" key={key}>
-                    <FontAwesomeIcon icon="check-circle" className="icon" />
+                    <FontAwesomeIcon icon="check-circle" className="icon icon--m" />
                     {adv}
                   </li>
                 )

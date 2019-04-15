@@ -40,7 +40,6 @@ $this: '.welcome';
       }
 
       .icon {
-        @extend %font--l;
         margin-right: 12px;
         padding-top: 3px;
         color: $c-green;
