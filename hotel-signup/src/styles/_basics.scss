@@ -21,10 +21,6 @@
   // }
 }
 
-.main {
-  height: calc(100% - 50px); // 50px = header height
-}
-
 .title {
   @extend %font--xl;
   font-family: $f-f-paytone;
