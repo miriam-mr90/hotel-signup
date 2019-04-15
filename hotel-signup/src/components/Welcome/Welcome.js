@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CheckAnimate from '../CheckAnimate/CheckAnimate'
+import './Welcome.scss'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

@@ -3,6 +3,7 @@
  *
  */
 
+@import '../../styles/config/config';
 $this: '.user-selector';
 
 #{$this} {
@@ -21,12 +22,7 @@ $this: '.user-selector';
     cursor: pointer;
     transition: all 400ms linear;
 
-
     & + & { margin-top: 16px; }
-
-    &:hover {
-      color: $c-shapire;
-    }
   }
 
   &__disclaimer {
