@@ -1,0 +1,22 @@
+/**
+ * app.scss
+ * - config -> _colors + _breakpoints + _fonts + functions + animations + mixins
+ * - _reset (reset styles: a, button, ul)
+ * - _helpers (align, hidden, )
+ * - _base [body, ]
+ * - _button
+ * - _link
+ * - _form
+ * - modules -> [header, ]
+ */
+
+@import
+  'config/config',
+  '_reset',
+  '_basics',
+  '_base',
+  '_button',
+  '_form',
+  '_header',
+  '_icon',
+  '_nav';
