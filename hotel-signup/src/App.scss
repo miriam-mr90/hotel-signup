@@ -7,11 +7,11 @@ $this: '.App';
   align-items: center;
   min-height: 100vh;
 
-  background-image: url(https://bit.ly/2Z37i9U);
+  background: #203c5d80;
+  background-image: url(images/bg-image.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background: #203c5d80;
 
   .main { flex: 1; }
 }
