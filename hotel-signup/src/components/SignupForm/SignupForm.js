@@ -44,11 +44,11 @@ class SignupForm extends Component {
   }
 
   render = () => {
-    const inputs = this.props.form.form;
+    const inputs = this.props.form;
 
     return (
       <section className="signup-form">
-        <h1 className="title">{this.props.form.title}</h1>
+        <h1 className="title">{this.props.title}</h1>
 
         <form onSubmit={this.handleSubmit} className="form">
           {

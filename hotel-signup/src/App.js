@@ -17,16 +17,8 @@ class App extends Component {
       users: [],
       currentView: 'select-type',
       types: userTypes.map((type, key) => ({ key: key, label: type.label })),
-      signupForm: {
-        title: '',
-        form: []
-      },
-      welcome: {
-        name: '',
-        title: '',
-        message: '',
-        advantages: []
-      }
+      userTypeSelected: {},
+      userName:''
     }
 
     this.addUser = this.addUser
@@ -41,21 +33,9 @@ class App extends Component {
   }
 
   selectUserType = (typeKey) => {
-    const type = this.state.userTypes[typeKey]
-
-    // Get texts to show by user type selected
+    // Set userTypeSelected
     this.setState({
-      signupForm: {
-        ...this.state.signupForm,
-        title: type.pageTitle,
-        form: type.form
-      },
-      welcome: {
-        ...this.state.welcome,
-        title: type.welcomeTitle,
-        message: type.welcomeMessage,
-        advantages: type.advantages,
-      },
+      userTypeSelected: this.state.userTypes[typeKey],
       currentView: 'signup-form'
     })
   }
@@ -64,10 +44,7 @@ class App extends Component {
     // Save new user data and user name to display in Welcome view
     this.setState({
       users: [...this.state.users, user],
-      welcome: {
-        ...this.state.welcome,
-        user: user.name
-      },
+      userName: user.name,
       currentView: 'welcome'
     })
   }
@@ -96,10 +73,10 @@ class App extends Component {
             this.state.currentView === 'select-type' && <UserSelector onSelectUserType={this.selectUserType} types={this.state.types} />
           }
           {
-            this.state.currentView === 'signup-form' && <SignupForm onAddUser={this.addUser} form={this.state.signupForm} />
+            this.state.currentView === 'signup-form' && <SignupForm onAddUser={this.addUser} title={this.state.userTypeSelected.pageTitle} form={this.state.userTypeSelected.form} />
           }
           {
-            this.state.currentView === 'welcome' && <Welcome welcome={this.state.welcome} />
+            this.state.currentView === 'welcome' && <Welcome welcome={this.state.userTypeSelected} user={this.state.userName}/>
           }
         </main>
       </div>

@@ -20,7 +20,7 @@ class Welcome extends Component {
       <section className="welcome">
         <div className="welcome__header">
           <h1 className="title">
-            {this.customMessage(this.props.welcome.title, this.props.welcome.user)}
+            {this.customMessage(this.props.welcome.welcomeTitle, this.props.userName)}
           </h1>
           <CheckAnimate className="welcome__check"/>
         </div>
@@ -43,8 +43,8 @@ class Welcome extends Component {
         ) : null}
 
         {/* Display User advantages only when exist */}
-        {this.props.welcome.message ? (
-          <p className="message">{this.props.welcome.message}</p>
+        {this.props.welcome.welcomeMessage ? (
+          <p className="message">{this.props.welcome.welcomeMessage}</p>
         ) : null}
 
         <button type="button" className="btn btn--primary welcome__continue">Continue</button>
