@@ -2,12 +2,7 @@ import React, { Component } from 'react'
 import CheckAnimate from '../CheckAnimate/CheckAnimate'
 import './Welcome.scss'
 
-// Import Font Awesome Icon
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-
-library.add(fas)
+import Icon from '../Icon/Icon'
 
 class Welcome extends Component {
   constructor() {
@@ -32,7 +27,7 @@ class Welcome extends Component {
               {this.props.welcome.advantages.map((adv, key) => {
                 return (
                   <li className="welcome__advantages__item" key={key}>
-                    <FontAwesomeIcon icon="check-circle" className="icon icon--m" />
+                    <Icon icon="check-circle" className="icon--m" />
                     {adv}
                   </li>
                 )

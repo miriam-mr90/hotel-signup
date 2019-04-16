@@ -3,18 +3,11 @@ import React, { Component } from 'react'
 import './styles/styles.scss'
 import './App.scss'
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-
 import { userTypes } from './user-types.json'
+import Icon from './components/Icon/Icon'
 import UserSelector from './components/UserSelector/UserSelector'
 import SignupForm from './components/SignupForm/SignupForm'
 import Welcome from './components/Welcome/Welcome'
-
-
-library.add(fas)
-
 
 class App extends Component {
   constructor() {
@@ -33,13 +26,12 @@ class App extends Component {
         title: '',
         message: '',
         advantages: []
-      },
-      welcome: []
+      }
     }
 
-    this.addUser = this.addUser.bind(this)
-    this.selectUserType = this.selectUserType.bind(this)
-    this.goBack = this.goBack.bind(this)
+    this.addUser = this.addUser
+    this.selectUserType = this.selectUserType
+    this.goBack = this.goBack
   }
 
   goBack = () => {
@@ -78,7 +70,7 @@ class App extends Component {
     })
   }
 
-  render = () => {
+  render () {
 
     return (
       <div className="App">
@@ -88,12 +80,12 @@ class App extends Component {
                 <button
                   className="btn btn--ghost nav__btn"
                   onClick={this.goBack}>
-                  <FontAwesomeIcon icon="chevron-left" className="icon" />
+                  <Icon icon="chevron-left" />
                 </button>
               ) : null}
 
               <button className="btn btn--ghost nav__btn nav__close">
-                <FontAwesomeIcon icon="times" className="icon" />
+                <Icon icon="times"/>
               </button>
             </nav>
         </header>
