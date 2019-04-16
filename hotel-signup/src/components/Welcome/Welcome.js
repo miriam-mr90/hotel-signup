@@ -7,15 +7,21 @@ import Icon from '../Icon/Icon'
 class Welcome extends Component {
   constructor() {
     super()
+
+    this.customMessage = this.customMessage
   }
 
-  render = () => {
-    const welcomeMessage = this.props.welcome.title.replace(/@\w*@/g, this.props.welcome.user);
+  customMessage = (title, user) => {
+    return title.replace(/@\w*@/g, user)
+  }
 
+  render() {
     return (
       <section className="welcome">
         <div className="welcome__header">
-          <h1 className="title">{welcomeMessage}</h1>
+          <h1 className="title">
+            {this.customMessage(this.props.welcome.title, this.props.welcome.user)}
+          </h1>
           <CheckAnimate className="welcome__check"/>
         </div>
 

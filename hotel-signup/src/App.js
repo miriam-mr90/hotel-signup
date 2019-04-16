@@ -43,6 +43,7 @@ class App extends Component {
   selectUserType = (typeKey) => {
     const type = this.state.userTypes[typeKey]
 
+    // Get texts to show by user type selected
     this.setState({
       signupForm: {
         ...this.state.signupForm,
@@ -60,6 +61,7 @@ class App extends Component {
   }
 
   addUser = (user) => {
+    // Save new user data and user name to display in Welcome view
     this.setState({
       users: [...this.state.users, user],
       welcome: {
@@ -71,7 +73,6 @@ class App extends Component {
   }
 
   render () {
-
     return (
       <div className="App">
         <header className="header wrapper">

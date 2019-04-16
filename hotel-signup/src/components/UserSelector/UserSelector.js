@@ -4,15 +4,14 @@ import './UserSelector.scss'
 class UserSelector extends Component {
   constructor() {
     super()
-    this.handleSelectType = this.handleSelectType.bind(this)
+    this.handleSelectType = this.handleSelectType
   }
 
   handleSelectType = (type) => {
     this.props.onSelectUserType(type)
   }
 
-  render = () => {
-
+  render() {
     return (
       <section className="user-selector">
         <h1 className="title">Signup</h1>
