@@ -8,18 +8,9 @@ class SignupForm extends Component {
       formData: []
     }
 
-    this.handleInput = this.handleInput.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.isFormValid = this.isFormValid.bind(this)
   }
-
-  handleInput = (event) => {
-    const { value, name } = event.target;
-    this.setState({
-      [name]: value
-    })
-  }
-
 
   handleSubmit = (event) => {
     event.preventDefault()
