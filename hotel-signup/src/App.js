@@ -9,7 +9,12 @@ import UserSelector from './components/UserSelector/UserSelector'
 import SignupForm from './components/SignupForm/SignupForm'
 import Welcome from './components/Welcome/Welcome'
 
-const USER_TYPES = userTypes.map((type, key) => ({ key: key, label: type.label }))
+const userTypesValues = userTypes.map((type, key) => ({ key: key, label: type.label }))
+
+// Set different Signup steps
+const welcomeStep = 'welcome'
+const signupFormStep = 'signup-form'
+const selectTypeStep = 'select-type'
 
 class App extends Component {
   constructor() {
@@ -17,7 +22,7 @@ class App extends Component {
     this.state = {
       userTypes,
       users: [],
-      currentView: 'select-type',
+      currentView: selectTypeStep,
       userTypeSelected: {},
       userName:''
     }
@@ -29,7 +34,7 @@ class App extends Component {
 
   goBack = () => {
     this.setState({
-      currentView: 'select-type'
+      currentView: selectTypeStep
     })
   }
 
@@ -37,7 +42,7 @@ class App extends Component {
     // Set userTypeSelected
     this.setState({
       userTypeSelected: this.state.userTypes[typeKey],
-      currentView: 'signup-form'
+      currentView: signupFormStep
     })
   }
 
@@ -46,16 +51,21 @@ class App extends Component {
     this.setState({
       users: [...this.state.users, user],
       userName: user.name,
-      currentView: 'welcome'
+      currentView: welcomeStep
     })
   }
 
   render () {
+    // Check which step is currently active
+    let isSelectTypeStep = this.state.currentView === selectTypeStep
+    let isSignupFormStep = this.state.currentView === signupFormStep
+    let isWelcomeStep = this.state.currentView === welcomeStep
+
     return (
       <div className="App">
         <header className="header wrapper">
             <nav className="nav">
-            {this.state.currentView !== 'select-type' ? (
+            {!isSelectTypeStep ? (
                 <button
                   className="btn btn--ghost nav__btn"
                   onClick={this.goBack}>
@@ -71,13 +81,13 @@ class App extends Component {
 
         <main className="main wrapper">
           {
-            this.state.currentView === 'select-type' && <UserSelector onSelectUserType={this.selectUserType} types={USER_TYPES} />
+            isSelectTypeStep && <UserSelector onSelectUserType={this.selectUserType} types={userTypesValues} />
           }
           {
-            this.state.currentView === 'signup-form' && <SignupForm onAddUser={this.addUser} title={this.state.userTypeSelected.pageTitle} form={this.state.userTypeSelected.form} />
+            isSignupFormStep && <SignupForm onAddUser={this.addUser} title={this.state.userTypeSelected.pageTitle} form={this.state.userTypeSelected.form} />
           }
           {
-            this.state.currentView === 'welcome' && <Welcome welcome={this.state.userTypeSelected} user={this.state.userName}/>
+            isWelcomeStep && <Welcome welcome={this.state.userTypeSelected} user={this.state.userName}/>
           }
         </main>
       </div>
