@@ -1,17 +1,14 @@
 import React, { Component } from 'react'
+import Icon from '../Icon/Icon'
 import CheckAnimate from '../CheckAnimate/CheckAnimate'
 import './Welcome.scss'
 
-import Icon from '../Icon/Icon'
-
 class Welcome extends Component {
-  constructor() {
-    super()
-
-    this.customMessage = this.customMessage
+  constructor(props) {
+    super(props)
   }
 
-  customMessage = (title, user) => {
+  titleMessage = (title, user) => {
     return title.replace(/@\w*@/g, user)
   }
 
@@ -20,7 +17,7 @@ class Welcome extends Component {
       <section className="welcome">
         <div className="welcome__header">
           <h1 className="title">
-            {this.customMessage(this.props.welcome.welcomeTitle, this.props.userName)}
+            {this.titleMessage(this.props.welcome.welcomeTitle, this.props.userName)}
           </h1>
           <CheckAnimate className="welcome__check"/>
         </div>

@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-
-import './styles/styles.scss'
-import './App.scss'
-
 import { userTypes } from './user-types.json'
 import Icon from './components/Icon/Icon'
 import UserSelector from './components/UserSelector/UserSelector'
 import SignupForm from './components/SignupForm/SignupForm'
 import Welcome from './components/Welcome/Welcome'
+import './styles/styles.scss'
+import './App.scss'
 
 const userTypesValues = userTypes.map((type, key) => ({ key: key, label: type.label }))
 
@@ -17,8 +15,8 @@ const signupFormStep = 'signup-form'
 const selectTypeStep = 'select-type'
 
 class App extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       userTypes,
       users: [],
@@ -26,10 +24,6 @@ class App extends Component {
       userTypeSelected: {},
       userName:''
     }
-
-    this.addUser = this.addUser
-    this.selectUserType = this.selectUserType
-    this.goBack = this.goBack
   }
 
   goBack = () => {

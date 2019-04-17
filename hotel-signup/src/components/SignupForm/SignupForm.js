@@ -2,14 +2,11 @@ import React, { Component } from 'react';
 import './SignupForm.scss'
 
 class SignupForm extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       formData: []
     }
-
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.isFormValid = this.isFormValid.bind(this)
   }
 
   handleSubmit = (event) => {

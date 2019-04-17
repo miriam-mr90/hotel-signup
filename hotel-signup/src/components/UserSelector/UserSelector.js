@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import './UserSelector.scss'
 
 class UserSelector extends Component {
-  constructor() {
-    super()
-    this.handleSelectType = this.handleSelectType
+  constructor(props) {
+    super(props)
   }
 
   handleSelectType = (type) => {
