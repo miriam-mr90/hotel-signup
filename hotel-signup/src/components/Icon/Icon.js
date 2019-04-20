@@ -6,8 +6,10 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 library.add(fas)
 
 const Icon = (props) => {
+  const { icon, className } = props
+
   return (
-    <FontAwesomeIcon icon={props.icon} className={"icon " + props.className} />
+    <FontAwesomeIcon icon={icon} className="icon ${className}" />
   )
 }
 

@@ -28,19 +28,19 @@ class SignupForm extends Component {
   }
 
   isFormValid = () => {
-    console.log('isFormValid');
+    // Form validation
   }
 
   render = () => {
-    const inputs = this.props.form;
+    const { form, title } = this.props;
 
     return (
       <section className="signup-form">
-        <h1 className="title">{this.props.title}</h1>
+        <h1 className="title">{title}</h1>
 
         <form onSubmit={this.handleSubmit} className="form">
           {
-            inputs.map((input, key) => (
+            form.map((input, key) => (
               <div className="form__group" key={key}>
                 <label htmlFor="type">{input.label}</label>
                 <input

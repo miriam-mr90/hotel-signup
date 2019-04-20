@@ -10,9 +10,11 @@ import './App.scss'
 const userTypesValues = userTypes.map((type, key) => ({ key: key, label: type.label }))
 
 // Set different Signup steps
-const welcomeStep = 'welcome'
-const signupFormStep = 'signup-form'
-const selectTypeStep = 'select-type'
+const steps = {
+  welcome: 'welcome',
+  signupForm: 'signup-form',
+  selectType: 'select-type'
+}
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +22,7 @@ class App extends Component {
     this.state = {
       userTypes,
       users: [],
-      currentView: selectTypeStep,
+      currentView: steps.selectType,
       userTypeSelected: {},
       userName:''
     }
@@ -28,7 +30,7 @@ class App extends Component {
 
   goBack = () => {
     this.setState({
-      currentView: selectTypeStep
+      currentView: steps.selectType
     })
   }
 
@@ -36,7 +38,7 @@ class App extends Component {
     // Set userTypeSelected
     this.setState({
       userTypeSelected: this.state.userTypes[typeKey],
-      currentView: signupFormStep
+      currentView: steps.signupForm
     })
   }
 
@@ -45,15 +47,17 @@ class App extends Component {
     this.setState({
       users: [...this.state.users, user],
       userName: user.name,
-      currentView: welcomeStep
+      currentView: steps.welcome
     })
   }
 
   render () {
+    const { currentView, userTypeSelected } = this.state
+
     // Check which step is currently active
-    let isSelectTypeStep = this.state.currentView === selectTypeStep
-    let isSignupFormStep = this.state.currentView === signupFormStep
-    let isWelcomeStep = this.state.currentView === welcomeStep
+    let isSelectTypeStep = currentView === steps.selectType
+    let isSignupFormStep = currentView === steps.signupForm
+    let isWelcomeStep = currentView === steps.welcome
 
     return (
       <div className="App">
@@ -78,10 +82,10 @@ class App extends Component {
             isSelectTypeStep && <UserSelector onSelectUserType={this.selectUserType} types={userTypesValues} />
           }
           {
-            isSignupFormStep && <SignupForm onAddUser={this.addUser} title={this.state.userTypeSelected.pageTitle} form={this.state.userTypeSelected.form} />
+            isSignupFormStep && <SignupForm onAddUser={this.addUser} title={userTypeSelected.pageTitle} form={userTypeSelected.form} />
           }
           {
-            isWelcomeStep && <Welcome welcome={this.state.userTypeSelected} user={this.state.userName}/>
+            isWelcomeStep && <Welcome welcome={userTypeSelected} user={this.state.userName}/>
           }
         </main>
       </div>

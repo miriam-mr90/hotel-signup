@@ -13,25 +13,27 @@ class Welcome extends Component {
   }
 
   render() {
+    const { welcome, userName } = this.props
+
     return (
       <section className="welcome">
         <div className="welcome__header">
           <h1 className="title">
-            {this.titleMessage(this.props.welcome.welcomeTitle, this.props.userName)}
+            { this.titleMessage(welcome.welcomeTitle, userName) }
           </h1>
           <CheckAnimate className="welcome__check"/>
         </div>
 
         {/* Display User advantages only when exist */}
-        {this.props.welcome.advantages ? (
+        { welcome.advantages ? (
           <div className="welcome__advantages">
             <h2 className="welcome__advantages__title">Advantages</h2>
             <ul className="welcome__advantages__list">
-              {this.props.welcome.advantages.map((adv, key) => {
+              { welcome.advantages.map((item, key) => {
                 return (
                   <li className="welcome__advantages__item" key={key}>
                     <Icon icon="check-circle" className="icon--m" />
-                    {adv}
+                    {item}
                   </li>
                 )
               })}
@@ -40,8 +42,8 @@ class Welcome extends Component {
         ) : null}
 
         {/* Display User advantages only when exist */}
-        {this.props.welcome.welcomeMessage ? (
-          <p className="message">{this.props.welcome.welcomeMessage}</p>
+        { welcome.welcomeMessage ? (
+          <p className="message">{welcome.welcomeMessage}</p>
         ) : null}
 
         <button type="button" className="btn btn--primary welcome__continue">Continue</button>
