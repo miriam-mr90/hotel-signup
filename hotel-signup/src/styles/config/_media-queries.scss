@@ -1,0 +1,18 @@
+/**
+ * MEDIA QUERIES
+ * - Breakpoints to media queries
+ * - SASS mixin to use them
+ */
+
+// Breakpoints variables
+$mq-xs: 576px;
+$mq-sm: 768px;
+$mq-m: 992px;
+$mq-l: 1200px;
+
+
+@mixin media($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
