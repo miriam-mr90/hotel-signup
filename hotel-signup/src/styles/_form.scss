@@ -48,7 +48,7 @@ $form-input-border-weight: 2px;
 
       &:focus {
         border-color: $c-shapire;
-        transition: all 0.55s cubic-bezier(.35,.33,.84,.85);
+        transition: all 0.55s cubic-bezier(0.35, 0.33, 0.84, 0.85);
       }
     }
 
