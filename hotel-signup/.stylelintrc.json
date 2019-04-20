@@ -1,0 +1,49 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "ignoreFiles": [
+    "components/web_ui/app/assets/stylesheets/web_ui/vendor/**",
+    "components/admin_ui/app/assets/stylesheets/admin_ui/vendor/**"
+  ],
+  "rules": {
+    "selector-pseudo-element-colon-notation": "double",
+    "media-feature-name-no-unknown": null,
+    "color-hex-case": "upper",
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "extend",
+          "at-root",
+          "debug",
+          "warn",
+          "error",
+          "if",
+          "else",
+          "for",
+          "each",
+          "while",
+          "mixin",
+          "include",
+          "content",
+          "return",
+          "function"
+        ]
+      }
+    ],
+    "function-name-case": [
+      "lower",
+      {
+        "ignoreFunctions": [
+          "/^DXImageTransform.Microsoft.*$/"
+        ]
+      }
+    ],
+    "declaration-empty-line-before": null,
+    "block-no-empty": true,
+    "shorthand-property-no-redundant-values": true,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "at-rule-empty-line-before": null
+  }
+}
