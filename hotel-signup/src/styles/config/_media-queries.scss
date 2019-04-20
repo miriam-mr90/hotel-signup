@@ -10,7 +10,6 @@ $mq-sm: 768px;
 $mq-m: 992px;
 $mq-l: 1200px;
 
-
 @mixin media($breakpoint) {
   @media (min-width: $breakpoint) {
     @content;
