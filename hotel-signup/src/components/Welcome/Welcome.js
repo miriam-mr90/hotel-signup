@@ -13,13 +13,13 @@ class Welcome extends Component {
   }
 
   render() {
-    const { welcome, userName } = this.props
+    const { welcome, user } = this.props
 
     return (
       <section className="welcome">
         <div className="welcome__header">
           <h1 className="title">
-            { this.titleMessage(welcome.welcomeTitle, userName) }
+            { this.titleMessage(welcome.welcomeTitle, user) }
           </h1>
           <CheckAnimate className="welcome__check"/>
         </div>
